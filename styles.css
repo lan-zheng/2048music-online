@@ -1,0 +1,61 @@
+.tile-2 { background-color: #eee4da; color: #776e65; }
+.tile-4 { background-color: #ede0c8; color: #776e65; }
+.tile-8 { background-color: #f2b179; color: #f9f6f2; }
+.tile-16 { background-color: #f59563; color: #f9f6f2; }
+.tile-32 { background-color: #f67c5f; color: #f9f6f2; }
+.tile-64 { background-color: #f65e3b; color: #f9f6f2; }
+.tile-128 { background-color: #edcf72; color: #f9f6f2; }
+.tile-256 { background-color: #edcc61; color: #f9f6f2; }
+.tile-512 { background-color: #edc850; color: #f9f6f2; }
+.tile-1024 { background-color: #edc53f; color: #f9f6f2; }
+.tile-2048 { background-color: #edc22e; color: #f9f6f2; }
+
+@keyframes merge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.tile-merged {
+    animation: merge 0.3s ease-in-out;
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.tile-new {
+    animation: appear 0.3s ease-in-out;
+}
+
+@keyframes highlight {
+    0% { background-color: #ffe600; }
+    100% { background-color: inherit; }
+}
+
+.tile-highlight {
+    animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes grow {
+    0% { font-size: 100%; }
+    50% { font-size: 120%; }
+    100% { font-size: 100%; }
+}
+
+.tile-grow {
+    animation: grow 0.3s ease-in-out;
+}
+
+@keyframes float-score {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.float-score {
+    position: absolute;
+    animation: float-score 0.8s ease-out;
+    color: #776e65;
+    font-weight: bold;
+}

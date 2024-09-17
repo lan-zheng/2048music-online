@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2048游戏音乐版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048游戏音乐版</h1>
+        <div class="score-container">
+            <div class="score-box">
+                <div class="label">分数</div>
+                <div id="score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="label">最高分</div>
+                <div id="best-score">0</div>
+            </div>
+        </div>
+        <div id="game-board"></div>
+        <div class="button-container">
+            <div class="button-row">
+                <button id="new-game" class="button">新游戏</button>
+                <button id="toggle-audio" class="button">音乐关</button>
+            </div>
+            <div class="button-row">
+                <button id="login-button" class="button">登录</button>
+                <button id="register-button" class="button">注册</button>
+                <button id="show-leaderboard" class="button">排行榜</button>
+            </div>
+        </div>
+        <div id="audio-control">
+            <select id="music-list"></select>
+            <audio id="bgm" loop></audio>
+        </div>
+        <div id="instructions">
+            <p>游戏规则：点击新游戏按钮时，触发启动音乐背景播放。如果希望音乐关闭，可以再点击关闭音乐。
+                使用方向键或在触摸屏上滑动来移动方块。相同数字的方块相撞时会合并成为它们的和。每次移动后，会在空白处随机生成一个新的2或4。尝试得到2048方块！</p>
+        </div>
+        <div id="user-system">
+            <span id="current-user">当前用户：兰</span>
+        </div>
+    </div>
+    <div id="leaderboard-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>排行榜</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>用户名</th>
+                        <th>最高分</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="close-leaderboard" class="button">关闭</button>
+        </div>
+    </div>
+    <div id="register-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>注册</h2>
+            <input type="text" id="register-username" placeholder="用户名">
+            <input type="password" id="register-password" placeholder="密码">
+            <button id="confirm-register" class="button">确认注册</button>
+            <button id="close-register" class="button">取消</button>
+        </div>
+    </div>
+    <div id="login-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>登录</h2>
+            <input type="text" id="login-username" placeholder="用户名">
+            <input type="password" id="login-password" placeholder="密码">
+            <button id="confirm-login" class="button">确认登录</button>
+            <button id="close-login" class="button">取消</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
